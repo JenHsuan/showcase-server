@@ -61,10 +61,10 @@ export const getPreviewContents = (): string[] => {
   return [
     '<meta property="og:title" content="Carousel for web layout practices" />',
     '<meta property="og:url" content = "https://nestjs-showcase-delegator.herokuapp.com/" /> ',
-    '< meta property = "og:image" content = "https://raw.githubusercontent.com/JenHsuan/showcase-server/master/images/cover.png" /> ',
-    '< meta property = "og:description" content = "It\'s a web site built by Nestjs for showing the practices that I learned from the internet" /> ',
-    '< meta name = "keywords" content = "CSS, Nest.js, JavaScript" /> ',
-    '< meta name = "author" content = "Jen-Hsuan Hsieh (Sean Hsieh)" />',
+    '<meta property = "og:image" content = "https://raw.githubusercontent.com/JenHsuan/showcase-server/master/images/cover.png" /> ',
+    '<meta property = "og:description" content = "It\'s a web site built by Nestjs for showing the practices that I learned from the internet" /> ',
+    '<meta name = "keywords" content = "CSS, Nest.js, JavaScript" /> ',
+    '<meta name = "author" content = "Jen-Hsuan Hsieh (Sean Hsieh)" />',
   ];
 };
 
@@ -93,9 +93,9 @@ export const getIconsStyle = (): string[] => {
 export const getNavigationButtonsStyle = (): string[] => {
   return [
     'body:hover .nav-btn { opacity:.7}',
-    '.previous-btn { position:absolute; top: 50vh; left: 25px;}',
+    '.previous-btn { position:absolute; top: 50vh; left: 40px;}',
     '.next-btn { position:absolute; top: 50vh;left:calc(100vw - 50px);}',
-    '.nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:25px;height:25px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600;}',
+    '.nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:40px;height:40px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:400;line-height:40px; font-size:24px;}',
     '.nav-btn:hover {background-color:rgba(0,0,0,.5); color:#fff;border:1px solid #fff;}',
   ];
 };

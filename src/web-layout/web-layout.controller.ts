@@ -35,6 +35,11 @@ export class WebLayoutController {
         let data = v.data;
         data = this.webLayoutService.insertCustomizedComponents(
           data,
+          getPreviewContents(),
+          '<head>',
+        );
+        data = this.webLayoutService.insertCustomizedComponents(
+          data,
           getNavigationButtons(),
           '<body>',
         );
@@ -52,11 +57,6 @@ export class WebLayoutController {
           data,
           getIconsStyle(),
           '<style type="text/css">',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getPreviewContents(),
-          '<head>',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
