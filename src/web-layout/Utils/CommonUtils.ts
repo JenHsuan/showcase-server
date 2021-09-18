@@ -45,12 +45,12 @@ export const getNavagationButtonsScript = (): string[] => {
           list.forEach(ele => {
               let child = document.createElement('span');
               child.setAttribute("class", "circle");
-              child.setAttribute("style", "margin-left:5px; border:  solid #fff; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;background-color:rgba(0,0,0,.3);width:10px;height:10px;");
+              child.setAttribute("style", "margin-left:5px; border:  solid #fff; box-shadow: 0px 1px 4px #000;border:1px solid #fff;cursor:pointer;z-index: 10000;border-radius:50%;background-color:rgba(0,0,0,.3);width:10px;height:10px;");
               circleGroup.appendChild(child)
           })
 
           var circle = document.getElementsByClassName('circle')[list.length - 1 - index];
-          circle.setAttribute("style","margin-left:5px; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;;width:10px;height:10px;background-color:#fff;");
+          circle.setAttribute("style","margin-left:5px; box-shadow: 0px 1px 4px #000;border:1px solid #fff;cursor:pointer;z-index: 10000;border-radius:50%;;width:10px;height:10px;background-color:#fff;");
       })
   `,
   ];

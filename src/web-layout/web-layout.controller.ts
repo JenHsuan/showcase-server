@@ -37,48 +37,22 @@ export class WebLayoutController {
         let data = v.data;
         data = this.webLayoutService.insertCustomizedComponents(
           data,
-          getPreviewContents(),
+          [...getPreviewContents(), ...getScriptSections(), ...getCssLinks()],
           '<head>',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
-          getNavigationButtons(),
+          [...getNavigationButtons(), ...getIcons(), ...getCircleGroups()],
           '<body>',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
-          getIcons(),
-          '<body>',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getCircleGroups(),
-          '<body>',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getNavigationButtonsStyle(),
+          [
+            ...getNavigationButtonsStyle(),
+            ...getIconsStyle(),
+            ...getCirclesStyle(),
+          ],
           '<style type="text/css">',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getIconsStyle(),
-          '<style type="text/css">',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getCirclesStyle(),
-          '<style type="text/css">',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getScriptSections(),
-          '<head>',
-        );
-        data = this.webLayoutService.insertCustomizedComponents(
-          data,
-          getCssLinks(),
-          '<head>',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
