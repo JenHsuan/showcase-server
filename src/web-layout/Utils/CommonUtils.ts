@@ -13,6 +13,7 @@ export const getNavagationButtonsScript = (): string[] => {
       .then(res => res.json())
       .then(res => {
           let list = res.content;
+          console.log(list)
           let index = list.findIndex(ele => ele === pathName)
           let next = list[index]
           index = index !== -1 ? index : 0;
@@ -34,6 +35,12 @@ export const getNavagationButtonsScript = (): string[] => {
             let githubUrl = 'https://github.com/JenHsuan/web-layout-practice/tree/master/' + next
             window.location.href = githubUrl
           })
+
+          var alaymanBtn = document.getElementsByClassName('alayman-icon')[0]
+          alaymanBtn.addEventListener("click", event => {
+            let alaymanUrl = 'https://daily-learning.herokuapp.com/'
+            window.location.href = alaymanUrl
+          })
       })
   `,
   ];
@@ -53,15 +60,22 @@ export const getNavigationButtons = (): string[] => {
 export const getIcons = (): string[] => {
   return [
     `
-  <div class='github-icon'>
+  <div class='github-icon' title="Github">
   <i class='fa fa-github'></i>
   </div>`,
+    `
+    <div class='alayman-icon' title="A Layman">
+    <img src='https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/alaymanicon.png'>
+    </div>
+    `,
   ];
 };
 
 export const getIconsStyle = (): string[] => {
   return [
-    '.github-icon { border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 50px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}',
+    '.github-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 60px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}',
+    '.alayman-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 120px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:transparent;width:35px;height:35px;}',
+    '.alayman-icon img{width:100%}',
   ];
 };
 
@@ -92,5 +106,18 @@ export const getCssLinks = (): string[] => {
 };
 
 export const ListMap = {
-  github: ['introduction', 'sideMenu', 'square'],
+  github: [
+    'introduction',
+    'card-with-text',
+    'full-layout',
+    'breadCrumbs',
+    'cross',
+    'footer',
+    'general-landscape',
+    'square',
+    'progressBar',
+    'sideMenu',
+    'sideMenuMultiLayers',
+    'sideMenuSwitch',
+  ],
 };

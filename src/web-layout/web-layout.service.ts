@@ -12,6 +12,11 @@ export class WebLayoutService {
     return this.httpService.get(getRealUrl(practiceName, 'github'));
   }
 
+  getList() {
+    return this.httpService.get(
+      'https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master/index.json',
+    );
+  }
   insertCustomizedComponents(
     htmlString: string,
     customizedComponent: string[],
