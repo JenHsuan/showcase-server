@@ -13,7 +13,6 @@ export const getNavagationButtonsScript = (): string[] => {
       .then(res => res.json())
       .then(res => {
           let list = res.content;
-          console.log(list)
           let index = list.findIndex(ele => ele === pathName)
           let next = list[index]
           index = index !== -1 ? index : 0;
@@ -41,6 +40,17 @@ export const getNavagationButtonsScript = (): string[] => {
             let alaymanUrl = 'https://daily-learning.herokuapp.com/'
             window.location.href = alaymanUrl
           })
+
+          var circleGroup = document.getElementsByClassName('circle-group')[0]
+          list.forEach(ele => {
+              let child = document.createElement('span');
+              child.setAttribute("class", "circle");
+              child.setAttribute("style", "margin-left:5px; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;background-color:#fff;width:10px;height:10px;");
+              circleGroup.appendChild(child)
+          })
+
+          var circle = document.getElementsByClassName('circle')[list.length - 1 - index];
+          circle.setAttribute("style","margin-left:5px; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;background-color:rgba(0,0,0,.3);width:10px;height:10px;");
       })
   `,
   ];
@@ -68,6 +78,10 @@ export const getPreviewContents = (): string[] => {
   ];
 };
 
+export const getCircleGroups = (): string[] => {
+  return ['<div class="circle-group"></div>'];
+};
+
 export const getIcons = (): string[] => {
   return [
     `
@@ -90,9 +104,15 @@ export const getIconsStyle = (): string[] => {
   ];
 };
 
+export const getCirclesStyle = (): string[] => {
+  return [
+    '.circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:200px;left:calc((100% - 200px)/2);top:calc(100vh - 80px);}'];
+};
+
 export const getNavigationButtonsStyle = (): string[] => {
   return [
     'body:hover .nav-btn { opacity:.7}',
+    'body:hover .circle-group { opacity:1}',
     '.previous-btn { position:absolute; top: 50vh; left: 40px;}',
     '.next-btn { position:absolute; top: 50vh;left:calc(100vw - 50px);}',
     '.nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:40px;height:40px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:400;line-height:40px; font-size:24px;}',

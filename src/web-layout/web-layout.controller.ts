@@ -9,6 +9,8 @@ import {
   getIcons,
   getIconsStyle,
   getPreviewContents,
+  getCircleGroups,
+  getCirclesStyle,
   ListMap,
 } from './Utils/CommonUtils';
 import ApiResponse from './Content/ApiResponse';
@@ -50,12 +52,22 @@ export class WebLayoutController {
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
+          getCircleGroups(),
+          '<body>',
+        );
+        data = this.webLayoutService.insertCustomizedComponents(
+          data,
           getNavigationButtonsStyle(),
           '<style type="text/css">',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
           getIconsStyle(),
+          '<style type="text/css">',
+        );
+        data = this.webLayoutService.insertCustomizedComponents(
+          data,
+          getCirclesStyle(),
           '<style type="text/css">',
         );
         data = this.webLayoutService.insertCustomizedComponents(
