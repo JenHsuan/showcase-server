@@ -1,5 +1,3 @@
-import { buffer } from "stream/consumers";
-
 const urlMap = {
   github: [
     'https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master',
@@ -63,7 +61,7 @@ export const getPreviewContents = (): string[] => {
   return [
     '<meta property="og:title" content="Carousel for web layout practices" />',
     '<meta property="og:url" content = "https://nestjs-showcase-delegator.herokuapp.com/" /> ',
-    '< meta property = "og:image" content = { image } /> ',
+    '< meta property = "og:image" content = "https://raw.githubusercontent.com/JenHsuan/showcase-server/master/images/cover.png" /> ',
     '< meta property = "og:description" content = "It\'s a web site built by Nestjs for showing the practices that I learned from the internet" /> ',
     '< meta name = "keywords" content = "CSS, Nest.js, JavaScript" /> ',
     '< meta name = "author" content = "Jen-Hsuan Hsieh (Sean Hsieh)" />',
