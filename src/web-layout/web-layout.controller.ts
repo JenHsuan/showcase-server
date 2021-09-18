@@ -8,6 +8,7 @@ import {
   getCssLinks,
   getIcons,
   getIconsStyle,
+  getPreviewContents,
   ListMap,
 } from './Utils/CommonUtils';
 import ApiResponse from './Content/ApiResponse';
@@ -51,6 +52,11 @@ export class WebLayoutController {
           data,
           getIconsStyle(),
           '<style type="text/css">',
+        );
+        data = this.webLayoutService.insertCustomizedComponents(
+          data,
+          getPreviewContents(),
+          '<head>',
         );
         data = this.webLayoutService.insertCustomizedComponents(
           data,
