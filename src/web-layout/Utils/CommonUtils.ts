@@ -45,7 +45,7 @@ export const getNavagationButtonsScript = (): string[] => {
           list.forEach(ele => {
               let child = document.createElement('span');
               child.setAttribute("class", "circle");
-              child.setAttribute("style", "margin-left:5px; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;background-color:#fff;width:10px;height:10px;");
+              child.setAttribute("style", "margin-left:5px; border:  solid #fff; box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;border-radius:50%;background-color:#fff;width:10px;height:10px;");
               circleGroup.appendChild(child)
           })
 
@@ -112,7 +112,7 @@ export const getCirclesStyle = (): string[] => {
 export const getNavigationButtonsStyle = (): string[] => {
   return [
     'body:hover .nav-btn { opacity:.7}',
-    'body:hover .circle-group { opacity:1}',
+    'body:hover .circle-group { opacity:7}',
     '.previous-btn { position:absolute; top: 50vh; left: 40px;}',
     '.next-btn { position:absolute; top: 50vh;left:calc(100vw - 50px);}',
     '.nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:40px;height:40px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:400;line-height:40px; font-size:24px;}',
