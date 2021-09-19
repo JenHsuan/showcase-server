@@ -12,11 +12,6 @@ export class WebLayoutService {
     return this.httpService.get(getRealUrl(practiceName, 'github'));
   }
 
-  getList() {
-    return this.httpService.get(
-      'https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master/index.json',
-    );
-  }
   insertCustomizedComponents(
     htmlString: string,
     customizedComponent: string[],
@@ -24,10 +19,9 @@ export class WebLayoutService {
   ): string {
     const fragments = htmlString.split(target);
     fragments.splice(fragments.length - 1, 0, target);
-    customizedComponent.forEach((component) => {
-      fragments.splice(fragments.length - 1, 0, component);
-    });
-    const data = fragments.join('');
-    return data;
+    customizedComponent.forEach((component) =>
+      fragments.splice(fragments.length - 1, 0, component),
+    );
+    return fragments.join('');
   }
 }
