@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Carousel for web layout practices" />
+    <meta property="og:url" content = "https://nestjs-showcase-delegator.herokuapp.com/notFound" />
+    <meta property = "og:image" content = "https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/404_2.png" />
+    <meta property = "og:description" content = "It\'s a web site built by Nestjs for showing the practices that I learned from the internet" />
+    <meta name = "keywords" content = "CSS, Nest.js, JavaScript" />
+    <meta name = "author" content = "Jen-Hsuan Hsieh (Sean Hsieh)" />
+    <title>Sorry</title>
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        body {
+          background-color: rgb(119, 187, 255, .3);
+          overflow: hidden;
+        }
+        .container {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          overflow: hidden;
+        }
+        .wrap {
+          display: flex;
+          max-width: 800px;
+          height: max-content;
+          margin: 0 auto;
+          align-items: center;
+        }
+        .item1 {
+          flex-grow: 0;
+          width: 800px;
+        }
+        .logo img {
+          width: 100%;
+        }
+        .description {
+          color: rgba(0,0,0,.5);
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 15px;
+        }
+        .txt {
+          margin: 50px 20px;
+        }
+        .oops {
+          background-color: rgb(119, 187, 255, .5);
+          box-shadow: 0px 5px 5px rgb(119, 187, 255, .9);
+          padding: 5px 15px 20px 15px;
+          border-radius: 10px;
+        }
+
+        .oops h1 {
+          border-bottom: 1px solid #000;
+          line-height: 60px;
+        }
+
+        .oops a{
+          text-decoration: none;
+          color: #000;
+          margin: 10px;
+          display: block;
+          font-weight: 400;
+        }
+
+        .oops i {
+          margin-right: 5px;
+        }
+
+        @media screen and (max-width: 500px){
+          .item2 {
+            display: none;
+          }
+          .wrap {
+            max-width: 400px;
+          }
+
+          .oops h1 {
+            font-style: 24px;
+          }
+        }
+    </style>
   </head>
   <body>
-    {{ message }}
+    <div class="container">
+      <div class="wrap">
+        <div class="item1">
+          <div class="txt">
+            <div class="oops">
+              <h1>
+                Oops! Page Not Found.
+              </h1>
+              <div class="description">
+                We can't seem to find the page you're looking for. Try any of these links instead.
+              </div>
+              <ul>
+                <li>
+                  <a href="https://nestjs-showcase-delegator.herokuapp.com/">
+                  <i class='fa fa-search'></i>Web layout showcase</a>
+                </li>
+                <li>
+                  <a href="https://daily-learning.herokuapp.com/">
+                  <i class='fa fa-search'></i>ALayaman Daily Reading</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item2">
+          <div class="logo">
+            <img src="https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/404.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
