@@ -150,5 +150,6 @@ export const ListMap = {
     'sideMenu',
     'sideMenuMultiLayers',
     'sideMenuSwitch',
+    'logn',
   ],
 };
