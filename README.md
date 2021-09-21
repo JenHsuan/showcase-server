@@ -32,3 +32,6 @@ $ npm run test:cov
 ```
 
 ## References
+### Observable
+### Fuctional Reactive Programming (FRP)
+* [FRP與函數式](https://www.ithome.com.tw/voice/91328)
