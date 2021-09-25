@@ -1,8 +1,5 @@
 const urlMap = {
-  github: [
-    'https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master',
-    'index.html',
-  ],
+  github: ["https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master", "index.html"],
 };
 
 export const getNavagationButtonsScript = (): string[] => {
@@ -32,7 +29,7 @@ export const getNavagationButtonsScript = (): string[] => {
           githubBtn.addEventListener("click", event => {
             next = list[index]
             let githubUrl = 'https://github.com/JenHsuan/web-layout-practice/tree/master/' + next
-            window.location.href = githubUrl
+            window.open(githubUrl, '_blank');
           })
 
           var alaymanBtn = document.getElementsByClassName('alayman-icon')[0]
@@ -98,58 +95,58 @@ export const getIcons = (): string[] => {
 
 export const getIconsStyle = (): string[] => {
   return [
-    '.github-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 60px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}',
-    '.alayman-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 120px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:transparent;width:35px;height:35px;}',
-    '.alayman-icon img{width:100%}',
+    ".github-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 60px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}",
+    ".alayman-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 120px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:transparent;width:35px;height:35px;}",
+    ".alayman-icon img{width:100%}",
   ];
 };
 
 export const getCirclesStyle = (): string[] => {
   return [
-    '.circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:200px;left:calc((100% - 200px)/2);top:calc(100vh - 80px);}'];
+    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:200px;left:calc((100% - 200px)/2);top:calc(100vh - 80px);}",
+  ];
 };
 
 export const getNavigationButtonsStyle = (): string[] => {
   return [
-    'body:hover .nav-btn { opacity:.7}',
-    'body:hover .circle-group { opacity:7}',
-    '.previous-btn { position:absolute; top: 50vh; left: 40px;}',
-    '.next-btn { position:absolute; top: 50vh;left:calc(100vw - 50px);}',
-    '.nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:40px;height:40px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:400;line-height:40px; font-size:24px;}',
-    '.nav-btn:hover {background-color:rgba(0,0,0,.5); color:#fff;border:1px solid #fff;}',
+    "body:hover .nav-btn { opacity:.7}",
+    "body:hover .circle-group { opacity:7}",
+    ".previous-btn { position:absolute; top: 50vh; left: 40px;}",
+    ".next-btn { position:absolute; top: 50vh;left:calc(100vw - 50px);}",
+    ".nav-btn {opacity:0;box-shadow: 0px 1px 4px #000; border:none;cursor:pointer;z-index: 10000; border-radius:50%;background-color:#fff;width:40px;height:40px;display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:400;line-height:40px; font-size:24px;}",
+    ".nav-btn:hover {background-color:rgba(0,0,0,.5); color:#fff;border:1px solid #fff;}",
   ];
 };
 
 export const getRealUrl = (name: string, key: string): string => {
   if (!urlMap.hasOwnProperty(key)) {
-    return '';
+    return "";
   }
   const fragments = [...urlMap[key]];
   fragments.splice(fragments.length - 1, 0, name);
-  console.log(fragments.join('/'));
-  return fragments.join('/');
+  return fragments.join("/");
 };
 
 export const getCssLinks = (): string[] => {
-  return [
-    '<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">',
-  ];
+  return ['<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">'];
 };
 
 export const ListMap = {
   github: [
-    'introduction',
-    'card-with-text',
-    'full-layout',
-    'breadCrumbs',
-    'sideMenuSwitch',
-    'cross',
-    'footer',
-    'sideMenuMultiLayers',
-    'general-landscape',
-    'square',
-    'progressBar',
-    'sideMenu',
-    'login',
+    "introduction",
+    "card-with-text",
+    "full-layout",
+    "breadCrumbs",
+    "sideMenuSwitch",
+    "cross",
+    "footer",
+    "sideMenuMultiLayers",
+    "general-landscape",
+    "square",
+    "progressBar",
+    "sideMenu",
+    "login",
+    "messageRecord",
+    "timeline",
   ],
 };
