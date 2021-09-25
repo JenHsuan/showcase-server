@@ -54,7 +54,7 @@ export const getNavagationButtonsScript = (): string[] => {
 };
 
 export const getScriptSections = (): string[] => {
-  return ['<script>', '</script>'];
+  return ["<script>", "</script>"];
 };
 
 export const getNavigationButtons = (): string[] => {
@@ -103,7 +103,7 @@ export const getIconsStyle = (): string[] => {
 
 export const getCirclesStyle = (): string[] => {
   return [
-    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:200px;left:calc((100% - 200px)/2);top:calc(100vh - 80px);}",
+    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:250px;left:calc((100% - 250px)/2);top:calc(100vh - 80px);}",
   ];
 };
 
