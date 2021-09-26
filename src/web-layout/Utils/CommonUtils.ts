@@ -148,5 +148,6 @@ export const ListMap = {
     "login",
     "messageRecord",
     "timeline",
+    "rotateSquare",
   ],
 };
