@@ -149,5 +149,7 @@ export const ListMap = {
     "messageRecord",
     "timeline",
     "rotateSquare",
+    "break",
+    "specialBorder",
   ],
 };
