@@ -1,3 +1,5 @@
+import { type } from "os";
+
 const urlMap = {
   github: ["https://raw.githubusercontent.com/JenHsuan/web-layout-practice/master", "index.html"],
 };
@@ -38,6 +40,13 @@ export const getNavagationButtonsScript = (): string[] => {
             window.location.href = alaymanUrl
           })
 
+
+          var mediumBtn = document.getElementsByClassName('medium-icon')[0]
+          alaymanBtn.addEventListener("click", event => {
+            let alaymanUrl = 'https://medium.com/a-layman'
+            window.location.href = alaymanUrl
+          })
+
           var circleGroup = document.getElementsByClassName('circle-group')[0]
           list.forEach(ele => {
               let child = document.createElement('span');
@@ -64,6 +73,12 @@ export const getNavigationButtons = (): string[] => {
   ];
 };
 
+export const getAlaymanIcon = (): string[] => {
+  return [
+    "<link rel='icon' href='https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/alaymanicon.png' type='image/x-icon' /> ",
+  ];
+};
+
 export const getPreviewContents = (): string[] => {
   return [
     '<meta property="og:title" content="Carousel for web layout practices" />',
@@ -86,16 +101,22 @@ export const getIcons = (): string[] => {
   <i class='fa fa-github'></i>
   </div>`,
     `
-    <div class='alayman-icon' title="A Layman">
-    <img src='https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/alaymanicon.png'>
-    </div>
-    `,
+  <div class='alayman-icon' title="A Layman">
+  <img src='https://raw.githubusercontent.com/JenHsuan/ALayman/master/views/images/alaymanicon.png'>
+  </div>
+  `,
+    `
+  <div class='medium-icon' title="Medium">
+  <i class='fa fa-medium'></i>
+  </div>
+  `,
   ];
 };
 
 export const getIconsStyle = (): string[] => {
   return [
     ".github-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 60px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}",
+    ".medium-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 180px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:#fff;width:35px;height:35px;}",
     ".alayman-icon { box-shadow: 0px 1px 4px #000;border:none;cursor:pointer;z-index: 10000;z-index: 10000; position:absolute; top: calc(100vh - 50px); left: calc(100vw - 120px); display:flex;justify-items:center;align-items:center;flex-direction:column;font-weight:600; font-size: 36px;border-radius:50%;background-color:transparent;width:35px;height:35px;}",
     ".alayman-icon img{width:100%}",
   ];
@@ -103,7 +124,7 @@ export const getIconsStyle = (): string[] => {
 
 export const getCirclesStyle = (): string[] => {
   return [
-    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:250px;left:calc((100% - 250px)/2);top:calc(100vh - 80px);}",
+    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:300px;left:calc((100% - 300px)/2);top:calc(100vh - 80px);}",
   ];
 };
 
