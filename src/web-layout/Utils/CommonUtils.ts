@@ -154,7 +154,7 @@ export const getCirclesStyle = (): string[] => {
 
 export const getSideMenuStyle = (): string[] => {
   return [
-    ".web-layout-side-menu {width:300px; box-shadow: 1px 2px 3px #ccc; background-color:rgba(0, 0, 0, .9); position:absolute; z-index:100000; transition: .3s; transform: translateX(-100%);}",
+    ".web-layout-side-menu {width:300px; min-height: 100%; box-shadow: 1px 2px 3px #ccc; background-color:rgba(0, 0, 0, .9); position:absolute; z-index:100000; transition: .3s; transform: translateX(-100%);}",
     ".web-layout-side-menu-item:hover {font-weight: 600}",
   ];
 };
