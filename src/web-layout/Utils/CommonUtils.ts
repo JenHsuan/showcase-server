@@ -124,7 +124,7 @@ export const getIconsStyle = (): string[] => {
 
 export const getCirclesStyle = (): string[] => {
   return [
-    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:300px;left:calc((100% - 300px)/2);top:calc(100vh - 80px);}",
+    ".circle-group {opacity:0;z-index: 10000;display:flex;position:absolute; width:400px;left:calc((100% - 400px)/2);top:calc(100vh - 80px);}",
   ];
 };
 
