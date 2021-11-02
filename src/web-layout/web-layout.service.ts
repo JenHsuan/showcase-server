@@ -10,10 +10,12 @@ import {
   getScriptSections,
   getCssLinks,
   getIcons,
+  getSideMenu,
   getIconsStyle,
   getPreviewContents,
   getCircleGroups,
   getCirclesStyle,
+  getSideMenuStyle,
   getAlaymanIcon,
   ListMap,
 } from "./Utils/CommonUtils";
@@ -47,12 +49,12 @@ export class WebLayoutService {
     );
     data = this.insertCustomizedComponents(
       data,
-      [...getNavigationButtons(), ...getIcons(), ...getCircleGroups()],
+      [...getSideMenu(), ...getNavigationButtons(), ...getIcons(), ...getCircleGroups()],
       "<body>",
     );
     data = this.insertCustomizedComponents(
       data,
-      [...getNavigationButtonsStyle(), ...getIconsStyle(), ...getCirclesStyle()],
+      [...getNavigationButtonsStyle(), ...getIconsStyle(), ...getCirclesStyle(), ...getSideMenuStyle()],
       '<style type="text/css">',
     );
     data = this.insertCustomizedComponents(data, getNavagationButtonsScript(), "<script>");
